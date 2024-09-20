@@ -5,21 +5,25 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>エンジニア未経験者向けカリキュラム</title>
+
+   <!-- SEOとセキュリティ対策 -->
+   <meta name="description" content="エンジニア未経験者向けカリキュラムです。HTML、CSS、JavaScript、PHPを使用して、ウェブ開発の基礎を学びます。">
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';">
+
+   <!-- スタイルシート -->
    <link rel="stylesheet" href="styles.css">
+
+   <!-- Google Fontsの追加（オプション） -->
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
    <header>
       <h1>エンジニア未経験者向けカリキュラム</h1>
+      <p class="tagline">ステップバイステップでエンジニアへの道を切り開こう</p>
    </header>
 
-   <nav>
-      <a href="#overview">概要</a>
-      <a href="#curriculum">カリキュラム</a>
-      <a href="#contact">お問い合わせ</a>
-   </nav>
-
-   <div class="container">
+   <main class="container">
       <section id="overview">
          <h2>概要</h2>
          <p>このカリキュラムは、エンジニア未経験者がステップバイステップで進むことで、プログラミングとウェブ開発の基本を学び、最終的にエンジニアとしてのスキルを身につけることを目的としています。全体期間は3ヶ月から6ヶ月を目安としており、1日あたり2時間から4時間の学習を推奨しています。
@@ -28,129 +32,363 @@
 
       <section id="curriculum">
          <h2>カリキュラム</h2>
-         <ul>
-            <li><a href="pages/languages.html">言語について</a>
-               <p>プログラミング言語とは、プログラムを書く際に用いる言語です。このカリキュラムでは、主にHTML、CSS、JavaScript、PHPを使用します。</p>
+         <!-- 検索バーの追加 -->
+         <input type="text" id="search" placeholder="カリキュラムを検索...">
+
+         <!-- アコーディオン形式のカリキュラムリスト -->
+         <ul id="curriculum-list">
+            <li class="curriculum-item">
+               <button class="accordion">言語について</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     プログラミング言語とは、プログラムを書く際に用いる言語です。このカリキュラムでは、主にHTML、CSS、JavaScript、PHPを使用します。
+                  </p>
+                  <a href="./pages/1.languages.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/vscode_install.html">VScode Install</a>
-               <p>Visual Studio Codeをインストールし、基本的な使い方を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">VScode Install</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Visual Studio Codeをインストールし、基本的な使い方を学びます。
+                  </p>
+                  <a href="./pages/2.vscode_install.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/html_display.html">HTML ブラウザ表示</a>
-               <p>HTMLの基本を学び、作成したHTMLファイルをブラウザで表示する方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">HTML ブラウザ表示</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     HTMLの基本を学び、作成したHTMLファイルをブラウザで表示する方法を学びます。
+                  </p>
+                  <a href="./pages/3.html_display.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/css_writing.html">CSS 記述</a>
-               <p>CSSの基本を学び、HTMLにスタイルを適用する方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">CSS 記述</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     CSSの基本を学び、HTMLにスタイルを適用する方法を学びます。
+                  </p>
+                  <a href="./pages/4.css_writing.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/css_check.html">CSS ブラウザ確認</a>
-               <p>CSSが適用されたHTMLをブラウザで確認する方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">CSS ブラウザ確認</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     CSSが適用されたHTMLをブラウザで確認する方法を学びます。
+                  </p>
+                  <a href="./pages/5.css_check.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/css_practice_border.html">CSS 練習⓵(Border)</a>
-               <p>CSSの`border`プロパティを使って、要素に枠線を追加する練習を行います。</p>
+            <li class="curriculum-item">
+               <button class="accordion">CSS 練習 (Border)</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     CSSのborderプロパティを使って、要素に枠線を追加する練習を行います。
+                  </p>
+                  <a href="./pages/6.css_practice_border.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/css_practice_classname.html">CSS 練習⓶(Class名付与)</a>
-               <p>CSSクラスの作成と適用方法を学び、効率的にスタイリングする方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">CSS 練習 (Class名付与)</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     CSSクラスの作成と適用方法を学び、効率的にスタイリングする方法を学びます。
+                  </p>
+                  <a href="./pages/7.css_practice_classname.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/css_practice_flexbox.html">CSS 練習⓷(Flexbox)</a>
-               <p>Flexboxの基本を学び、レイアウトを柔軟に設定する練習を行います。</p>
+            <li class="curriculum-item">
+               <button class="accordion">CSS 練習 (Flexbox)</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Flexboxの基本を学び、レイアウトを柔軟に設定する練習を行います。
+                  </p>
+                  <a href="./pages/8.css_practice_flexbox.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/css_flexbox.html">CSS Flexbox</a>
-               <p>Flexboxを使って、実際にレイアウトを作成します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">CSS Flexbox</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Flexboxを使って、実際にレイアウトを作成します。
+                  </p>
+                  <a href="./pages/9.css_flexbox.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/reset_css.html">Reset.cssとは</a>
-               <p>リセットCSSの役割と使用する利点について学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Reset.cssとは</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     リセットCSSの役割と使用する利点について学びます。
+                  </p>
+                  <a href="./pages/10.reset_css.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/layout_creation_order.html">参考レイアウト作成順</a>
-               <p>レイアウトを作成する際の順序とポイントを学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">レイアウト作成順</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     ウェブページのレイアウトを作成する順序とその重要性について学びます。
+                  </p>
+                  <a href="./pages/11.layout_creation_order.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/pc_layout_creation.html">参考レイアウトの作成（PCのみ）</a>
-               <p>PC向けのレスポンシブレイアウトを実際に作成してみます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">PCレイアウト作成</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     PC向けのレスポンシブなレイアウトを設計・実装する方法を学びます。
+                  </p>
+                  <a href="./pages/12.pc_layout_creation.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/css_animation.html">アニメーション利用(CSS)</a>
-               <p>CSSアニメーションを使用して、ページに動きを加える方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">CSSアニメーション</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     CSSを用いたアニメーションの基礎と応用技術を学びます。
+                  </p>
+                  <a href="./pages/13.css_animation.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/jquery_basics.html">JQuery基本</a>
-               <p>JQueryの基本を学び、JavaScriptライブラリを活用した開発を体験します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">JQuery 基本</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     jQueryの基本的な使い方と主要な機能を学びます。
+                  </p>
+                  <a href="./pages/14.jquery_basics.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/jquery_animation.html">JQueryを使ったアニメーション</a>
-               <p>JQueryを使用して、ページにアニメーション効果を追加します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">JQueryアニメーション</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     jQueryを用いたアニメーションの実装方法を学びます。
+                  </p>
+                  <a href="./pages/15.jquery_animation.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/aos_animation.html">アニメーション(AOS)利用</a>
-               <p>AOSライブラリを使って、スクロールに合わせたアニメーションを追加します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">AOSアニメーション</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     AOS (Animate On Scroll) ライブラリを使用したアニメーション効果の追加方法を学びます。
+                  </p>
+                  <a href="./pages/16.aos_animation.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/xampp_install.html">XAMPP Install</a>
-               <p>XAMPPをインストールし、ローカル開発環境を構築します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">XAMPPのインストール</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     XAMPPのインストール方法と基本的な設定を学びます。
+                  </p>
+                  <a href="./pages/17.xampp_install.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/php_contact_form.html">PHP お問い合わせフォームの作成</a>
-               <p>PHPを使用して、お問い合わせフォームを作成します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">PHP お問い合わせフォーム</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     PHPを使用したお問い合わせフォームの作成方法を学びます。
+                  </p>
+                  <a href="./pages/18.php_contact_form.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/mysql_basics.html">MySQLの基本</a>
-               <p>データベースの基礎を学び、MySQLの基本操作を習得します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">MySQLの基本</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     MySQLの基本的な操作方法とデータベース設計の基礎を学びます。
+                  </p>
+                  <a href="./pages/19.mysql_basics.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/composer_install.html">Composer Install</a>
-               <p>Composerをインストールし、PHPライブラリを管理する方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Composerのインストール</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     PHPの依存管理ツールであるComposerのインストール方法と基本的な使い方を学びます。
+                  </p>
+                  <a href="./pages/20.composer_install.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/laravel_install.html">Laravel Install</a>
-               <p>Laravelフレームワークをインストールし、初期設定を行います。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Laravelのインストール</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Laravelフレームワークのインストール手順と初期設定を学びます。
+                  </p>
+                  <a href="./pages/21.laravel_install.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/github_laravel.html">LaravelプロジェクトをGitHubに公開しよう！</a>
-               <p>LaravelプロジェクトをGitHubに公開する手順を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">GitHubでのLaravelプロジェクト公開</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     GitHubを使用してLaravelプロジェクトを公開・管理する方法を学びます。
+                  </p>
+                  <a href="./pages/22.github_laravel.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/php_local_display.html">PHP ローカル表示</a>
-               <p>PHPをローカルサーバーで表示し、動作を確認します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">PHP ローカル表示</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     PHPスクリプトをローカル環境で実行し、ウェブページに表示する方法を学びます。
+                  </p>
+                  <a href="./pages/23.php_local_display.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/git_install.html">Git Install</a>
-               <p>Gitをインストールし、バージョン管理の基本を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Gitのインストール</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Gitのインストール方法と基本的なコマンドを学びます。
+                  </p>
+                  <a href="./pages/24.git_install.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/sourcetree_usage.html">SourceTreeの使い方</a>
-               <p>SourceTreeを使用して、Gitのビジュアル管理を行います。</p>
+            <li class="curriculum-item">
+               <button class="accordion">SourceTreeの使い方</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     SourceTreeを使用したGitリポジトリの管理方法を学びます。
+                  </p>
+                  <a href="./pages/25.sourcetree_usage.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/github_basics.html">GitHub とは</a>
-               <p>GitHubの基本的な使い方と、プロジェクト管理の方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">GitHubの基本</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     GitHubの基本的な機能と使い方を学びます。
+                  </p>
+                  <a href="./pages/26.github_basics.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/laravel_version_control.html">Laravel プロジェクト・バージョンとは</a>
-               <p>Laravelでのプロジェクトバージョン管理の概念と実践方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Laravelバージョン管理</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Laravelプロジェクトにおけるバージョン管理のベストプラクティスを学びます。
+                  </p>
+                  <a href="./pages/27.laravel_version_control.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/laravel_login.html">Laravel ログイン機能の実装</a>
-               <p>Laravelを使って、ログイン機能を実装します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Laravel ログイン機能</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Laravelを使用してユーザーのログイン機能を実装する方法を学びます。
+                  </p>
+                  <a href="./pages/28.laravel_login.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/laravel_account_management.html">Laravel アカウント登録・編集作成</a>
-               <p>ユーザーのアカウント登録、編集機能を作成します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Laravel アカウント管理</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Laravelでユーザーアカウントの管理機能を実装する方法を学びます。
+                  </p>
+                  <a href="./pages/29.laravel_account_management.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/laravel_user_contact.html">Laravel お問合せ(ユーザー)</a>
-               <p>ユーザーからの問い合わせフォームを作成します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Laravel お問い合わせ(ユーザー)</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Laravelを使用してユーザーからのお問い合わせを管理する機能を実装します。
+                  </p>
+                  <a href="./pages/30.laravel_user_contact.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/laravel_admin_contact.html">Laravel お問合せ(管理)</a>
-               <p>管理者用の問い合わせ管理機能を実装します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Laravel お問い合わせ(管理)</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Laravelを使用して管理者向けのお問い合わせ管理機能を実装します。
+                  </p>
+                  <a href="./pages/31.laravel_admin_contact.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/mvc_basics.html">MVCとは</a>
-               <p>MVCアーキテクチャの基本と、その活用方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">MVCの基本</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     MVCアーキテクチャの基本概念とLaravelにおける実装方法を学びます。
+                  </p>
+                  <a href="./pages/32.mvc_basics.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/crud_basics.html">CRUDとは</a>
-               <p>CRUD（Create, Read, Update, Delete）の基本と、実際のデータ操作を体験します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">CRUD 基本</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     CRUD（Create, Read, Update, Delete）操作の基本を学び、Laravelで実装します。
+                  </p>
+                  <a href="./pages/33.crud_basics.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/validation_implementation.html">バリデーション実装</a>
-               <p>フォームバリデーションを実装し、データの入力を制限します。</p>
+            <li class="curriculum-item">
+               <button class="accordion">バリデーション実装</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Laravelでフォームデータのバリデーションを実装する方法を学びます。
+                  </p>
+                  <a href="./pages/34.validation_implementation.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/routing_naming.html">ルーティングの名前定義</a>
-               <p>ルーティングの基本と、名前定義を使用したルーティングの方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">ルーティングの名前定義</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Laravelでルートに名前を付け、ルーティングを効率的に管理する方法を学びます。
+                  </p>
+                  <a href="./pages/35.routing_naming.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/laravel_db_integration.html">Laravel DB連携</a>
-               <p>Laravelとデータベースを連携させ、データ操作を行います。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Laravel DB連携</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     Laravelとデータベースの連携方法を学び、データの操作を行います。
+                  </p>
+                  <a href="./pages/36.laravel_db_integration.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/csrf_protection.html">CSRF対策</a>
-               <p>CSRF対策の基本を学び、Laravelでの実装方法を学びます。</p>
+            <li class="curriculum-item">
+               <button class="accordion">CSRF対策</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     クロスサイトリクエストフォージェリ（CSRF）攻撃からアプリケーションを保護する方法を学びます。
+                  </p>
+                  <a href="./pages/37.csrf_protection.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
-            <li><a href="pages/heroku_deploy.html">Herokuにデプロイ</a>
-               <p>Herokuを使って、プロジェクトを本番環境にデプロイします。</p>
+            <li class="curriculum-item">
+               <button class="accordion">Herokuへのデプロイ</button>
+               <div class="panel">
+                  <p class="curriculum-description">
+                     LaravelアプリケーションをHerokuにデプロイする手順を学びます。
+                  </p>
+                  <a href="./pages/38.heroku_deploy.html" class="curriculum-link">詳細を見る</a>
+               </div>
             </li>
          </ul>
       </section>
+   </main>
 
-      <section id="contact">
-         <h2>お問い合わせ</h2>
-         <p>カリキュラムに関する質問やサポートが必要な場合は、こちらからお問い合わせください。</p>
-      </section>
-   </div>
+   <footer>
+      <p>&copy; 2024 ITエンジニア未経験者向けカリキュラム. All Rights Reserved.</p>
+   </footer>
+
+   <!-- JavaScript for Accordion and Search Functionality -->
+   <script src="script.js"></script>
 </body>
 
 </html>
